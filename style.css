@@ -95,7 +95,7 @@ body {
 
 .project h3 {
   color: aqua;
-  font-size: 300;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -159,8 +159,8 @@ margin-top: -10px;
 }
 
 .profile-image img {
-  width: 120px;
-  border-radius: 10px;
+  width: 100px;
+  border-radius: 5px;
   object-fit: cover;
   transition: all 0.4s ease;
   margin: 0;
@@ -218,6 +218,48 @@ margin-top: -10px;
   backdrop-filter: blur(10px);
 }
 
+.about-zigzag {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 30px;
+  padding: 10 px 0 40px;
+}
+
+.card-zigzag {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  background-color: rgb(56, 98, 134);
+  backdrop-filter: 0 8px 32px 0 #29129d;
+  border-radius: 5px;
+}
+
+.card-zigzag.reverse {
+  flex-direction: row-reverse;
+}
+
+.card-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.card-text h3 {
+  font-family: DM Serif, serif;
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.card-text p {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
 
 @media (max-width: 768px) {
  body,
@@ -232,7 +274,7 @@ margin-top: -10px;
   }
   img {
     max-width: 90%;
-    height: auto;5
+    height: auto;
     display: block;
     margin: 0 auto !important;
   }
@@ -243,7 +285,21 @@ margin-top: -10px;
   .profesi {
     margin: 5px 0;
   }
+  .about-zigzag {
+    grid-template-columns: 1fr;
+  }
+  .card-zigzag {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-zigzag.reverse {
+    flex-direction: column;
+  }
+  .card-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
 }
-
 
 
